@@ -1,10 +1,11 @@
 plugins {
+	id 'java'
+	id 'com.gradle.build-scan' version '2.0.2'
 	id 'org.springframework.boot' version '2.1.7.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
 }
 
-group = 'com.a'
+group = 'com.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
