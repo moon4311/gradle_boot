@@ -32,7 +32,7 @@ spring:
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector
+    url: jdbc:log4jdbc:mysql://localhost:3306/connector
     username: user
     password: user
     tomcat:
@@ -46,9 +46,9 @@ spring:
   profiles: dev
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://115.68.106.113:3306/SY_NOTI
-    username: thebis
-    password: dhrckwkd
+    url: jdbc:log4jdbc:mysql://localhost:3306/
+    username: user
+    password: user
     tomcat:
       test-on-borrow: true
       validation-query: SELECT 1
