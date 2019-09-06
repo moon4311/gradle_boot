@@ -1,0 +1,63 @@
+server:
+  port: 8081
+#  error:
+#    whitelabel.enabled: true
+
+spring:
+  profiles.active: local
+  application.name: gradle_boot
+#  http.multipart:
+#    enabled: true
+#    max-file-size: 10MB    
+
+mybatis:
+#  configuration.map-underscore-to-camel-case: true
+  config-location: classpath:sqlmap/mybatis-config.xml
+  mapper-locations: classpath:sqlmap/mappers/*.xml
+#  mapper-location: classpath:sqlmap/mappers/**/*.xml
+
+#server.tomcat.basedir: .
+#server.tomcat.accesslog:
+#  enabled: false
+#  pattern: "%{yyyy-MM-dd HH:mm:ss}t\t%s\t%r\t%{X-Forwarded-For}i\t%b"
+#  directory: logs/
+#  prefix: access-log
+#  suffix: .log
+logging.config: classpath:logback-spring.xml
+
+---
+
+spring:
+  profiles: local
+  datasource:
+#    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector
+    username: user
+    password: user
+    tomcat:
+      test-on-borrow: true
+      validation-query: SELECT 1
+      time-between-eviction-runs-millis: 3600000
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+#    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://115.68.106.113:3306/SY_NOTI
+    username: thebis
+    password: dhrckwkd
+    tomcat:
+      test-on-borrow: true
+      validation-query: SELECT 1
+      time-between-eviction-runs-millis: 3600000
+
+
+#globals:
+#  file.upload-path: /sysoft/upload/consulting/
+#  safe.download-path: /home/sysoft/v01-api/tomcat-8.5.12/webapps/v01-api/WEB-INF/classes/static/down/
+#  sch.ip-address: 115.68.106.113
+#  cust-prtc-amt-url: http://115.68.106.113:9090/bid-manager/etcunusl/CustPrtcAmtCustNotiSch/
+#  auto-anals-ach-url: http://115.68.106.113:9090/bid-manager/etcunusl/AutoAnalsAch/
