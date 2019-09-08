@@ -1,12 +1,12 @@
 package com.boot;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.user.service.dao.UserDao;
 
 @SpringBootApplication
+@MapperScan(basePackages = "com.user.service.*")
 public class GradleBootApplication {
 	
 	public static void main(String[] args) {
