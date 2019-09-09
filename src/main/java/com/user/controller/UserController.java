@@ -1,17 +1,22 @@
 package com.user.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-//@RequestMapping("/")
+import com.user.model.UserVO;
+import com.user.service.UserService;
+
+@Controller
 public class UserController {
 
+	@Autowired
+	UserService userService;
+	
 	@RequestMapping("/main")
-//	public @ResponseBody String connectionTest() {
 	public String connectionTest() {
-		System.out.println("연결 확인");
-		return "Success Connect";
+		UserVO user = userService.getUser();
+		System.out.println("user : " + user);
+		return "index";
 	}
 }

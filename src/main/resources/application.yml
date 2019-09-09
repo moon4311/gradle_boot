@@ -1,9 +1,13 @@
 server:
   port: 8081
+  tomcat:    uri-encoding: UTF-8
+    basedir: .
 
 spring:
   profiles.active: local
   application.name: gradle_boot
+  mvc:    view:      prefix: /WEB-INF/jsp/
+      suffix: .jsp 
 
 mybatis:
   config-location: classpath:sqlmap/mybatis-config.xml
