@@ -13,7 +13,7 @@ public class UserService {
 	private static UserDao userDao;
 	
 	public UserVO getUser() {
-		System.out.println(userDao);
+		System.err.println(userDao);
 		return userDao.getUser();
 	}
 }
