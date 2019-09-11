@@ -1,12 +1,15 @@
 server:
   port: 8081
-  tomcat:    uri-encoding: UTF-8
+  tomcat:
+    uri-encoding: UTF-8
     basedir: .
 
 spring:
   profiles.active: local
   application.name: gradle_boot
-  mvc:    view:      prefix: /WEB-INF/jsp/
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
       suffix: .jsp 
 
 mybatis:
@@ -44,7 +47,7 @@ spring:
   profiles: dev
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/
+    url: jdbc:log4jdbc:mysql://localhost:3306/
     username: user
     password: user
     tomcat:
