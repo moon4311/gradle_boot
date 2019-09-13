@@ -15,8 +15,8 @@ public class UserController {
 	UserService userService;
 	
 	@RequestMapping("/main")
-//	public @ResponseBody String connectionTest() {  return °ª ±×´ë·Î Ãâ·Â
-	public String connectionTest() {		// return .jsp ·Î ÀÌµ¿
+//	public @ResponseBody String connectionTest() {  return ê°’ ê·¸ëŒ€ë¡œ ì¶œë ¥
+	public String connectionTest() {		// return .jsp ë¡œ ì´ë™
 		UserVO user = userService.getUser();
 		System.out.println("user : " + user.getUserId());
 		return "index";

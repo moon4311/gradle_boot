@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * »ç¿ëÀÚ
+ * ì‚¬ìš©ì
  *
  * @author Kim Jae Moon
  * @since 2019. 9. 06.
