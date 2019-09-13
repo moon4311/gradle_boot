@@ -18,7 +18,7 @@ public class UserController {
 //	public @ResponseBody String connectionTest() {  return 값 그대로 출력
 	public String connectionTest() {		// return .jsp 로 이동
 		UserVO user = userService.getUser();
-		System.out.println("user : " + user);
+		System.out.println("user : " + user.getUserId());
 		return "index";
 	}
 }
