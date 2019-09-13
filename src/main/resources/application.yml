@@ -15,7 +15,7 @@ spring:
 mybatis:
   config-location: classpath:sqlmap/mybatis-config.xml
   mapper-locations: classpath:sqlmap/mapper/*.xml
-#  mapper-location: classpath:sqlmap/mappers/**/*.xml
+  type-aliases-package: com.user.model  # mybatis 매핑 type을 짧게 쓰기 위한 설정
 
 #server.tomcat.basedir: .
 #server.tomcat.accesslog:
@@ -24,7 +24,10 @@ mybatis:
 #  directory: logs/
 #  prefix: access-log
 #  suffix: .log
-logging.config: classpath:logback-spring.xml
+logging:
+  config: classpath:logback-spring.xml
+  level:     com.user.mapper: trace # mapper 이하를 로깅 위치로 설정.
+    com.user.service: trace
 
 ---
 
@@ -33,7 +36,8 @@ spring:
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:log4jdbc:mysql://localhost:3306/connector
+#    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector
+    url: jdbc:mysql://15.164.129.107:3306/connector
     username: user
     password: user
     tomcat:

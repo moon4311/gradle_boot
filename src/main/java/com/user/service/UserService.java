@@ -3,17 +3,16 @@ package com.user.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.user.mapper.UserMapper;
 import com.user.model.UserVO;
-import com.user.service.dao.UserDao;
 
 @Service
 public class UserService {
 
 	@Autowired
-	private static UserDao userDao;
+	private UserMapper userMapper;
 	
 	public UserVO getUser() {
-		System.err.println(userDao);
-		return userDao.getUser();
+		return userMapper.getUser();
 	}
 }

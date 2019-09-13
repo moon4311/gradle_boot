@@ -1,6 +1,7 @@
-package com.user.service.dao;
+package com.user.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import com.user.model.UserVO;
 
@@ -12,7 +13,8 @@ import com.user.model.UserVO;
  */
 
 @Mapper
-public interface UserDao {
+@Repository
+public interface UserMapper {
 
 	public UserVO getUser();
 }

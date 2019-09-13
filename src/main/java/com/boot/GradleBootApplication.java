@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.user")
+@MapperScan(basePackages = "com.user.mapper")
 @ComponentScan(basePackages = "com.user")
 public class GradleBootApplication {
 	
