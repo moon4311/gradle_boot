@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.user.model.UserVO;
 
 /**
- * »ç¿ëÀÚ
+ * ì‚¬ìš©ì
  *
  * @author Kim Jae Moon
  * @since 2019. 9. 06.
