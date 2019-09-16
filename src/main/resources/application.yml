@@ -16,8 +16,10 @@ spring:
   mvc:
     static-path-pattern: /** # 리소스 검색 패턴 
     view:
-      prefix: /WEB-INF/jsp/
-      suffix: .jsp
+      prefix: /views/
+      suffix: .html
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
 
 mybatis:
   config-location: classpath:sqlmap/mybatis-config.xml
