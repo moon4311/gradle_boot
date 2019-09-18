@@ -1,5 +1,7 @@
 package com.user.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +18,8 @@ import com.user.model.UserVO;
 @Repository
 public interface UserMapper {
 
-	public UserVO getUser();
+	public UserVO getUser(UserVO userVO);
+	public List<UserVO> getUserList(UserVO userVO);
+	public void updateUser(UserVO userVO);
+	public void insertUser(UserVO userVO);
 }
