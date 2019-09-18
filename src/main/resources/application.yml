@@ -18,6 +18,8 @@ spring:
     view:
       prefix: /views/
       suffix: .html
+  banner:
+    location: banner.txt
 #      prefix: /WEB-INF/jsp/
 #      suffix: .jsp
 
@@ -25,6 +27,7 @@ mybatis:
   config-location: classpath:sqlmap/mybatis-config.xml
   mapper-locations: classpath:sqlmap/mapper/*.xml
   type-aliases-package: com.user.model  # mybatis 매핑 type을 짧게 쓰기 위한 설정
+
 
 #server.tomcat.accesslog:
 #  enabled: false
