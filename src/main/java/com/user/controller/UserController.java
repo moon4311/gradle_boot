@@ -1,7 +1,5 @@
 package com.user.controller;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,13 +30,12 @@ public class UserController {
 	
 	@RequestMapping("/loginChk")
 	public @ResponseBody Object loginChk(@RequestBody UserVO userVO){
-		JSONObject jsonObject = new JSONObject();
-		try {
-			jsonObject.put("userVO", userService.getUser(userVO));
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return jsonObject;
+		/*
+		 * JSONObject jsonObject = new JSONObject(); try { jsonObject.put("userVO",
+		 * userService.getUser(userVO)); } catch (JSONException e) {
+		 * e.printStackTrace(); } return jsonObject;
+		 */
+		return null;
 	} 
 	
 }
