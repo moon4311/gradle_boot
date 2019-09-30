@@ -1,6 +1,5 @@
 HELP.md
 .gradle
-build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -31,3 +30,10 @@ out/
 
 ### node ###
 **/node_modules/
+
+### vue ###
+.editorconfig
+.eslintignore
+.eslintrc.js
+.babelrc
+.gitkeep
