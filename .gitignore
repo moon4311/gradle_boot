@@ -17,6 +17,7 @@ work/*
 .springBeans
 .sts4-cache
 
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -25,11 +26,8 @@ work/*
 out/
 
 ### NetBeans ###
-/nbproject/private/
-/nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
 
-### VS Code ###
-.vscode/
+### node ###
+**/node_modules/

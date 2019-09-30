@@ -1,0 +1,16 @@
+{
+  "name": "gradle_boot",
+  "version": "1.0.0",
+  "description": "gradle+springBoot+vue",
+  "main": "index.js",
+  "dependencies": {
+    "element-ui": "^2.12.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MoonJae",
+  "license": "ISC"
+}
