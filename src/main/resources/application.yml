@@ -37,7 +37,8 @@ mybatis:
 #  suffix: .log
 logging:
   config: classpath:logback-spring.xml
-  level:     com.user.mapper: trace # mapper 이하를 로깅 위치로 설정.
+  level: 
+    com.user.mapper: trace # mapper 이하를 로깅 위치로 설정.
     com.user.service: trace
 
 ---
@@ -70,10 +71,3 @@ spring:
       validation-query: SELECT 1
       time-between-eviction-runs-millis: 3600000
 
-
-#globals:
-#  file.upload-path: /sysoft/upload/consulting/
-#  safe.download-path: /home/sysoft/v01-api/tomcat-8.5.12/webapps/v01-api/WEB-INF/classes/static/down/
-#  sch.ip-address: 115.68.106.113
-#  cust-prtc-amt-url: http://115.68.106.113:9090/bid-manager/etcunusl/CustPrtcAmtCustNotiSch/
-#  auto-anals-ach-url: http://115.68.106.113:9090/bid-manager/etcunusl/AutoAnalsAch/
