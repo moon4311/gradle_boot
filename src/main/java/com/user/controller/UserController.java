@@ -2,7 +2,6 @@ package com.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -14,28 +13,14 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-	
-	@RequestMapping("/")
-//	public @ResponseBody String connectionTest() {  return 값 그대로 출력
-	public String Goindex() {		// return .jsp 로 이동
-		
-		return "index";
-	}
-	
-	@RequestMapping("/login")
-	public String login(){
-		return "login";
-	} 
-	
-	
+
 	@RequestMapping("/loginChk")
-	public @ResponseBody Object loginChk(@RequestBody UserVO userVO){
-		/*
-		 * JSONObject jsonObject = new JSONObject(); try { jsonObject.put("userVO",
-		 * userService.getUser(userVO)); } catch (JSONException e) {
-		 * e.printStackTrace(); } return jsonObject;
-		 */
-		return null;
-	} 
-	
+//	@JsonFormat
+//	public @ResponseBody Object loginChk(@RequestBody UserVO userVO) {
+	public @ResponseBody Object loginChk() {
+
+		UserVO user = userService.getUser(null);
+		return user;
+	}
+
 }

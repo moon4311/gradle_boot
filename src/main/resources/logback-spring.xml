@@ -68,7 +68,7 @@
 	</logger>
 
 	<!-- User Class -->
-	<logger name="kr.co.jinbid.cslt" level="DEBUG" additivity="false">
+	<logger name="com.user" level="TRACE" additivity="false">
 		<appender-ref ref="console" />
 	</logger>
 
