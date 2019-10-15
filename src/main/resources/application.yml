@@ -11,12 +11,11 @@ spring:
   application.name: gradle_boot
   resources:
     add-mappings: true
-#    static-locations:
-#    - classpath:/static/ # 리소스를 찾을 위치
+    
   mvc:
-    static-path-pattern: /** # 리소스 검색 패턴 
+    static-path-pattern: /static/** # 리소스 검색 패턴 
     view:
-      prefix: /views/
+      prefix: /static/views/        # view 파일들 위치
       suffix: .html
   banner:
     location: banner.txt
@@ -49,7 +48,7 @@ spring:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     driverClassName: com.mysql.cj.jdbc.Driver
 #    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector
-    url: jdbc:mysql://localhost:3306/connector
+    url: jdbc:mysql://15.164.129.107:3306/connector
     username: user
     password: user
     tomcat:
