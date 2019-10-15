@@ -36,3 +36,6 @@ out/
 .editorconfig
 .babelrc
 .gitkeep
+
+### vue after build ###
+src/main/resources/static/
