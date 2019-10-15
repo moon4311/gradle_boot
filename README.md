@@ -22,6 +22,7 @@
 <h2> front build</h2>
 <ul>
   <li>cd gradle_boot\src\main\</li>
+  <li>npm install</li>
   <li>npm run build (build path : src\main\resources\static)</li>
   <li>* gitignore \src\main\resources\static</li>
 </ul>
