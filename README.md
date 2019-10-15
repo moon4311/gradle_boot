@@ -19,6 +19,14 @@
 </ul>
 
 
+<h2> front build</h2>
+<ul>
+  <li>cd gradle_boot\src\main\</li>
+  <li>npm run build (build path : src\main\resources\static)</li>
+  <li>* gitignore \src\main\resources\static</li>
+</ul>
+
+
 <h3>참고사이트</h3>
 <ul>
   <li></li>
