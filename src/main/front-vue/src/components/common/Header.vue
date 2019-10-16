@@ -1,27 +1,27 @@
 <template>
     <div class="header">
-        <!-- 折叠按钮 -->
+        <!-- 접기 -->
         <div class="collapse-btn" @click="collapseChage">
             <i class="el-icon-menu"></i>
         </div>
-        <div class="logo">出行助手后台管理系统</div>
+        <div class="logo">ManageSystem</div>
         <div class="header-right">
             <div class="header-user-con">
-                <!-- 全屏显示 -->
+                <!-- 전체화면 표시 -->
                 <div class="btn-fullscreen" @click="handleFullScreen">
-                    <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">
+                    <el-tooltip effect="dark" :content="fullscreen?`전체화면 취소`:`전체화면`" placement="bottom">
                         <i class="el-icon-rank"></i>
                     </el-tooltip>
                 </div>
-                <!-- 用户头像 -->
+                <!-- 사용자 -->
                 <div class="user-avator"><img src="static/img/img.jpg"></div>
-                <!-- 用户名下拉菜单 -->
+                <!-- 사옹자명-->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
                         {{username}} <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item divided  command="loginout">退出登录</el-dropdown-item>
+                        <el-dropdown-item divided  command="loginout">로그아웃</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>

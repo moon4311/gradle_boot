@@ -30,7 +30,7 @@
             return {
                 collapse: false,
                 items: [
-                    /*{
+                    {
                         icon: 'el-icon-setting',
                         index: 'dashboard',
                         title: '系统首页'
@@ -87,7 +87,7 @@
                         icon: 'el-icon-error',
                         index: '404',
                         title: '404页面'
-                    }*/
+                    }
                 ]
             }
         },
@@ -112,7 +112,7 @@
             getMenu() {
                 let _this = this
                 if (null === sessionStorage.getItem('bs_menu')) {
-                    _this.$axios.get('/jeysine/admin/private/menu/user').then(function (res) {
+                    _this.$axios.get('/user/menu').then(function (res) {
                         if (_this.validateCode(res)) {
                             _this.items = res.data.data
                             sessionStorage.setItem('bs_menu', JSON.stringify(_this.items))

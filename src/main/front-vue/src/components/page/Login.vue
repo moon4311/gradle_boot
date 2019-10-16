@@ -3,14 +3,14 @@
         <div class="ms-title">后台管理系统</div>
         <div class="ms-login">
             <el-form :model="user" :rules="rules" ref="user" label-width="0px" class="demo-ruleForm">
-                <el-form-item prop="account">
-                    <el-input v-model="user.account" placeholder="account"></el-input>
+                <el-form-item prop="userId">
+                    <el-input v-model="user.userId" placeholder="userId"></el-input>
                 </el-form-item>
-                <el-form-item prop="password">
-                    <el-input type="password" placeholder="password" v-model="user.password" @keyup.enter.native="submitForm('user')"></el-input>
+                <el-form-item prop="pwd">
+                    <el-input type="pwd" placeholder="pwd" v-model="user.pwd" @keyup.enter.native="submitForm('user')"></el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm('user')">登录</el-button>
+                    <el-button type="primary" @click="submitForm('user')">로그인</el-button>
                 </div>
             </el-form>
         </div>
@@ -22,15 +22,15 @@
         data: function(){
             return {
                 user: {
-                    account: '',
-                    password: ''
+                    userId: '',
+                    pwd: ''
                 },
                 rules: {
-                    account: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
+                    userId: [
+                        { required: true, message: '사용자 이름 입력', trigger: 'blur' }
                     ],
-                    password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
+                    pwd: [
+                        { required: true, message: '비밀번호 입력', trigger: 'blur' }
                     ]
                 }
             }
@@ -49,13 +49,13 @@
             },
             login() {
                 let _this = this
-                this.$axios.post('/jeysine/admin/public/user/login', this.user).then(function (res) {
+                this.$axios.post('/user/login', this.user).then(function (res) {
                     if (_this.validateCode(res)) {
                         _this.user = res.data.data
-                        sessionStorage.setItem('ms_username',_this.user.account);
+                        sessionStorage.setItem('ms_username',_this.user.userId);
                         _this.$router.push('/');
                     } else {
-                        _this.error('帐号或密码错误')
+                        _this.error('잘못된 계정 또는 비밀번호')
                     }
                 }, function () {
                     _this.systemError(_this)

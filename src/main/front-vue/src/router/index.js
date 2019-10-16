@@ -17,17 +17,17 @@ export default new Router({
                 {
                     path: '/user',
                     component: resolve => require(['../components/page/UserTable.vue'], resolve),
-                    meta: { title: '用户管理' }
+                    meta: { title: '사용자관리' }
                 },
                 {
                     path: '/role',
                     component: resolve => require(['../components/page/RoleTable.vue'], resolve),
-                    meta: { title: '角色管理' }
+                    meta: { title: '역할관리' }
                 },
                 {
                     path: '/dashboard',
                     component: resolve => require(['../components/page/Dashboard.vue'], resolve),
-                    meta: { title: '系统首页' }
+                    meta: { title: '대시보드' }
                 }
 
             ]
