@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class UserVO {
-	private int id = 0;
+	private Integer id = 0;
 	private String userId;
 	private String pwd;
 	private String userName;
@@ -27,7 +27,7 @@ public class UserVO {
 	 * 사용자 체크
 	 * @return
 	 */
-	public boolean existedUser() {
-		return id > 0;
+	public boolean existed() {
+		return id != null ;
 	}
 }

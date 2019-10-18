@@ -1,5 +1,7 @@
 package com.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +14,24 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 	
+	private UserVO emptyVo = new UserVO();
 	/**
 	 * 사용자 조회
 	 * @param userVO
 	 * @return
 	 */
 	public UserVO getUser(UserVO userVO) {
-		return userMapper.getUser(userVO);
+		return userMapper.selectOne(userVO);
+	}
+	
+	/**
+	 * 사용자 조회
+	 */
+	public List<UserVO> getUserList(UserVO userVO) {
+		if(userVO == null)
+			userVO = emptyVo;
+			
+		return userMapper.selectList(userVO);
 	}
 	
 	/**
@@ -26,9 +39,9 @@ public class UserService {
 	 * @param userVO
 	 */
 	public void upsertUser(UserVO userVO) {
-		if(userVO.existedUser())
-			userMapper.updateUser(userVO);
+		if(userVO.existed())
+			userMapper.update(userVO);
 		else
-			userMapper.insertUser(userVO);
+			userMapper.insert(userVO);
 	}
 }

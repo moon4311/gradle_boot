@@ -28,6 +28,11 @@ export default new Router({
                     path: '/dashboard',
                     component: resolve => require(['../components/page/Dashboard.vue'], resolve),
                     meta: { title: '대시보드' }
+                },
+                {
+                    path: '/menu',
+                    component: resolve => require(['../components/page/Menu.vue'], resolve),
+                    meta: { title: '메뉴' }
                 }
 
             ]

@@ -112,7 +112,7 @@
             getMenu() {
                 let _this = this
                 if (null === sessionStorage.getItem('bs_menu')) {
-                    _this.$axios.get('/user/menu').then(function (res) {
+                    _this.$axios.get('http://localhost:8081/menu').then(function (res) {
                         if (_this.validateCode(res)) {
                             _this.items = res.data.data
                             sessionStorage.setItem('bs_menu', JSON.stringify(_this.items))

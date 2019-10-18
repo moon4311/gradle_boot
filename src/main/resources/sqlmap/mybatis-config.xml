@@ -43,6 +43,8 @@
         <typeAlias alias="ArrayList" type="java.util.ArrayList"/>
         <typeAlias alias="Map" type="java.util.Map"/>
         <typeAlias alias="HashMap" type="java.util.HashMap"/>
+        
+        <package name="com.user.model"/>
     </typeAliases>
 
 </configuration>

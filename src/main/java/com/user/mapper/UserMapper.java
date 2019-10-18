@@ -16,10 +16,20 @@ import com.user.model.UserVO;
 
 @Mapper
 @Repository
-public interface UserMapper {
+public interface UserMapper extends BasicMapper{
 
-	public UserVO getUser(UserVO userVO);
-	public List<UserVO> getUserList(UserVO userVO);
-	public void updateUser(UserVO userVO);
-	public void insertUser(UserVO userVO);
+	
+	/** 목록 조회 */
+	public List<UserVO> selectList(UserVO userVO);
+	
+	/** 단건 조회 */
+	public UserVO selectOne(UserVO userVO);
+
+	/** 입력 */
+	public void insert(UserVO userVO);
+
+	/** 수정, 삭제 */
+	public void update(UserVO userVO);
+	
+	
 }

@@ -4,17 +4,6 @@
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
     @import "../static/css/main.css";
     @import "../static/css/color-dark.css";     /*深色主题*/
