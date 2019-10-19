@@ -108,7 +108,11 @@
                 pageNum: 1,
                 form: {
                     name: '',
-                    id: ''
+                    account: '',
+                    createDate: '',
+                    createBy: '',
+                    roleName: '',
+                    dept: ''
                 },
                 idx: -1,
 
@@ -116,8 +120,17 @@
                     name: [
                         { required: true, message: '请输入姓名', trigger: 'blur' }
                     ],
-                    id: [
+                    roleId: [
+                        { required: true, message: '请选择角色', trigger: 'change' }
+                    ],
+                    account: [
+                        { required: true, message: '请输入帐号', trigger: 'blur' },
+                    ],
+                    password: [
                         { required: true, message: '请输入密码', trigger: 'blur' },
+                    ],
+                    dept: [
+                        { required: true, message: '请输入部门', trigger: 'blur' }
                     ]
 
                 }
@@ -188,7 +201,9 @@
                 switch (this.select_cate) {
                     case 'all' : queryField = { }; break;
                     case 'name' : queryField = { name : this.select_word }; break;
-                    case 'id' : queryField = { id : this.select_word }; break;
+                    case 'account' : queryField = { account : this.select_word }; break;
+                    case 'dept' : queryField = { dept : this.select_word }; break;
+                    case 'roleName' : queryField = { roleName : this.select_word }; break;
                     default: queryField = { }; break;
                 }
                 return queryField
@@ -223,7 +238,6 @@
                 let _this = this
                 let username = sessionStorage.getItem('ms_username');
                 this.$axios.post("/jeysine/admin/private/user/active?username=" + username).then((res) => {
-                // this.$axios.post("/jeysine/admin/private/user/active?username=" + username).then((res) => {
                     if (!_this.validateCode(res)) {
                         _this.$message.error(res.data.data.message);
                         return ;
@@ -239,8 +253,10 @@
                     this.tableData.unshift(user)
                     this.$message.success(`新增成功`);
                 } else {
-                    this.tableData[this.idx].id = user.id;
+                    this.tableData[this.idx].roleId = user.roleId;
                     this.tableData[this.idx].name = user.name;
+                    this.tableData[this.idx].dept = user.dept;
+                    this.tableData[this.idx].roleName = user.roleName;
                     this.$message.success(`修改第 ${this.idx+1} 行成功`);
                 }
             },

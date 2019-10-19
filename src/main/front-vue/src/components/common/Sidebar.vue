@@ -97,36 +97,22 @@
             }
         },
         created(){
-            this.items = JSON.parse(sessionStorage.getItem('bs_menu'))
-            console.log('items: '+ this.items)
-            if (null === this.items) {
-                console.log('Not menu in local')
-                this.getMenu()
-            }
-            // �싪퓝 Event Bus 瓦쏂죱瀯꾡뻑�뿴�싦에竊뚧씎�뒛�룧堊㎬씁�젎
-            bus.$on('collapse', msg => {
-                this.collapse = msg;
-            })
+        	this.getMenu();
         },
         methods: {
             getMenu() {
-                let _this = this
-                if (null === sessionStorage.getItem('bs_menu')) {
-                    _this.$axios.get('/menu').then(function (res) {
-                        if (_this.validateCode(res)) {
-                            _this.items = res.data.data
-                            sessionStorage.setItem('bs_menu', JSON.stringify(_this.items))
-                            console.log(_this.items)
-                        } else {
-                            console.log(_this.message)
-                        }
-                    }, function (res) {
-                        //console.log(res.data.message)
-                    })
-                }
+                let _this = this;
+                _this.$axios.get('/menu').then(function (res) {
+                        console.log(res);
+                        console.log(res.data);
+                        _this.items = res.data;
+                        sessionStorage.setItem('bs_menu', JSON.stringify(_this.items))
+                        console.log(_this.items);
+                }, function (res) {
+                    //console.log(res.data.message)
+                })
             }
         }
-
     }
 </script>
 

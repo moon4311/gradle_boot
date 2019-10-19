@@ -10,7 +10,7 @@
             <p></p>
             <p>想尝试一下，请<router-link to="/login" class="logout">退出登录</router-link></p>
         </div>
-
+		{{ menu }}
     </div>
 </template>
 
@@ -30,13 +30,13 @@ export default {
             	'/menu', 
             	JSON.stringify(this.menuVO)
             ).then(function (res) {
-                if (_this.validateCode(res)) {
+                //if (_this.validateCode(res)) {
                     _this.menu = res.data.data;
                     console.log(_this.menu);
                     //_this.$router.push('/');
-                } else {
-                    _this.error('post error1')
-                }
+                //} else {
+                   // _this.error('post error1')
+                //}
             }, function () {
                 _this.systemError(_this)
             })

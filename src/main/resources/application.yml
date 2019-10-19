@@ -48,9 +48,9 @@ spring:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     driverClassName: com.mysql.cj.jdbc.Driver
 #    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector?&serverTimezone=UTC
-    url: jdbc:mysql://localhost:3306/connector?characterEncoding=UTF-8&serverTimezone=UTC
-    username: user2
-    password: user2
+    url: jdbc:mysql://15.164.129.107:3306/connector?characterEncoding=UTF-8&serverTimezone=UTC
+    username: user
+    password: user
     tomcat:
       test-on-borrow: true
       validation-query: SELECT 1

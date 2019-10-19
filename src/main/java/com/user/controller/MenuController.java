@@ -22,7 +22,6 @@ public class MenuController {
 //	public @ResponseBody Object getList(@RequestBody MenuVO menuVO) {
 	public @ResponseBody Object getList() {
 		MenuVO menuVO = new MenuVO();
-		System.err.println(menuVO);
 		List<MenuVO> list = menuService.getMenuList(menuVO);
 		System.err.println(list);
 		return list;
@@ -30,7 +29,8 @@ public class MenuController {
 	
 	@RequestMapping("/{id}")
 	public @ResponseBody Object getOne(@PathVariable Integer id) {
-		MenuVO vo = new MenuVO(id);
+		MenuVO vo = new MenuVO();
+		vo.setId(id);
 		vo = menuService.getMenu(vo);
 		return vo;
 	}
