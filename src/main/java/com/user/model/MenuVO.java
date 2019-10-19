@@ -27,4 +27,11 @@ public class MenuVO {
 	public MenuVO(){}
 	public MenuVO(Integer id){ this.id = id;}
 	
+	public void setIsUse(boolean use) {
+		this.isUse = use;
+	}
+	
+	public boolean getUse(){
+		return isUse;
+	}
 }

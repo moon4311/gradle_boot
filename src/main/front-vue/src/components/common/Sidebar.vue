@@ -33,60 +33,60 @@
                     {
                         icon: 'el-icon-setting',
                         index: 'dashboard',
-                        title: '系统首页'
+                        title: '楹사퍨腰뽭〉'
                     },
                     {
                         icon: 'el-icon-tickets',
                         index: 'table',
-                        title: '基础表格'
+                        title: '�읃簾�烏ⓩ졏'
                     },
                     {
                         icon: 'el-icon-message',
                         index: 'tabs',
-                        title: 'tab选项卡'
+                        title: 'tab�됮」�뜞'
                     },
                     {
                         icon: 'el-icon-date',
                         index: '3',
-                        title: '表单相关',
+                        title: '烏ⓨ뜒�쎑�뀽',
                         subs: [
                             {
                                 index: 'form',
-                                title: '基本表单'
+                                title: '�읃�쑍烏ⓨ뜒'
                             },
                             {
                                 index: 'editor',
-                                title: '富文本编辑器'
+                                title: '野뚧뻼�쑍煐뽬풌�솳'
                             },
                             {
                                 index: 'markdown',
-                                title: 'markdown编辑器'
+                                title: 'markdown煐뽬풌�솳'
                             },
                             {
                                 index: 'upload',
-                                title: '文件上传'
+                                title: '�뻼餓뜸툓鴉�'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-star-on',
                         index: 'charts',
-                        title: 'schart图表'
+                        title: 'schart�쎗烏�'
                     },
                     {
                         icon: 'el-icon-rank',
                         index: 'drag',
-                        title: '拖拽列表'
+                        title: '�떀�떭�닓烏�'
                     },
                     {
                         icon: 'el-icon-warning',
                         index: 'permission',
-                        title: '权限测试'
+                        title: '�쓢�솏役뗨캊'
                     },
                     {
                         icon: 'el-icon-error',
                         index: '404',
-                        title: '404页面'
+                        title: '404窈들씊'
                     }
                 ]
             }
@@ -103,7 +103,7 @@
                 console.log('Not menu in local')
                 this.getMenu()
             }
-            // 通过 Event Bus 进行组件间通信，来折叠侧边栏
+            // �싪퓝 Event Bus 瓦쏂죱瀯꾡뻑�뿴�싦에竊뚧씎�뒛�룧堊㎬씁�젎
             bus.$on('collapse', msg => {
                 this.collapse = msg;
             })
@@ -112,7 +112,7 @@
             getMenu() {
                 let _this = this
                 if (null === sessionStorage.getItem('bs_menu')) {
-                    _this.$axios.get('http://localhost:8081/menu').then(function (res) {
+                    _this.$axios.get('/menu').then(function (res) {
                         if (_this.validateCode(res)) {
                             _this.items = res.data.data
                             sessionStorage.setItem('bs_menu', JSON.stringify(_this.items))
