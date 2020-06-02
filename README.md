@@ -4,7 +4,7 @@
   <li>Vue.js (https://github.com/axios/axios)</li>
   <li>Vue Ui : element(https://element.eleme.io/#/en-US)</li>
   <li>HTTP 통신 : axios (https://github.com/axios/axios)</li>
-  <li>Build : Gradle 5.4 (https://gradle.org/releases/)</li>
+  <li>Build : Gradle 5.6.1 (https://gradle.org/releases/)</li>
   <li>SpringBoot 2.1.7</li>
   <li>mybatis</li>
   <li>DataBase : mySql</li>
