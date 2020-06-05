@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8021
   tomcat:
     uri-encoding: UTF-8
     basedir: .
@@ -46,11 +46,13 @@ spring:
   profiles: local
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    driverClassName: com.mysql.cj.jdbc.Driver
+#    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: oracle.jdbc.driver.OracleDriver
 #    url: jdbc:log4jdbc:mysql://15.164.129.107:3306/connector?&serverTimezone=UTC
-    url: jdbc:mysql://15.164.129.107:3306/connector?characterEncoding=UTF-8&serverTimezone=UTC
-    username: user
-    password: user
+#    url: jdbc:mysql://15.164.129.107:3306/connector?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: kjm
+    password: 1111
     tomcat:
       test-on-borrow: true
       validation-query: SELECT 1
@@ -62,9 +64,10 @@ spring:
   profiles: dev
   datasource:
 #    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://localhost:3306/connector?characterEncoding=UTF-8&serverTimezone=UTC
-    username: user2
-    password: user2
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: kjm
+    password: 1111
     tomcat:
       test-on-borrow: true
       validation-query: SELECT 1
