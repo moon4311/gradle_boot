@@ -41,34 +41,34 @@
     	<property name="useLegacyBuilder" value="true"/>
     </javaClientGenerator>
     
-    <table 	tableName="TB_CMSADMENUINFO"  	domainObjectName="CMS_MENUINFO"   >
+    <table 	tableName="TB_CMSADMENUINFO"  	domainObjectName="MenuInfo"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSADMENUTYPE"  	domainObjectName="CMS_MENUTYPE"   >
+    <table 	tableName="TB_CMSADMENUTYPE"  	domainObjectName="MenuType"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSCOMMONCODE"  	domainObjectName="CMS_COMNCODE"   >
+    <table 	tableName="TB_CMSCOMMONCODE"  	domainObjectName="ComnCode"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSIPCONFIG"  	domainObjectName="CMS_IPCONFIG"   >
+    <table 	tableName="TB_CMSIPCONFIG"  	domainObjectName="IpConfig"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
 
-    <table 	tableName="TB_CMSIPCONFIGINFO"  	domainObjectName="CMS_IPCONFIG"   >
+    <table 	tableName="TB_CMSIPCONFIGINFO"  	domainObjectName="IpConfigInfo"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSMBR"  	domainObjectName="CMS_MBR"   >
+    <table 	tableName="TB_CMSMBR"  	domainObjectName="MBR"   >
     	<generatedKey column="MBR_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSMBRLOG"  	domainObjectName="CMS_MBRLOG"   >
+    <table 	tableName="TB_CMSMBRLOG"  	domainObjectName="MbrLog"   >
     </table>
-    <table 	tableName="TB_CMSMBRSESS"  	domainObjectName="CMS_MBRSESS"   >
+    <table 	tableName="TB_CMSMBRSESS"  	domainObjectName="MbrSess"   >
     </table>
-    <table 	tableName="TB_CMSMBRTYPE"  	domainObjectName="CMS_MBRTYPE"   >
+    <table 	tableName="TB_CMSMBRTYPE"  	domainObjectName="MbrType"   >
     </table>
-    <table 	tableName="TB_CMSVISITLOG"  	domainObjectName="CMS_VISITLOG"   >
+    <table 	tableName="TB_CMSVISITLOG"  	domainObjectName="VisitLog"   >
     </table>
-    <table 	tableName="TB_LOGINLOG"  	domainObjectName="CMS_LOGINLOG"   >
+    <table 	tableName="TB_LOGINLOG"  	domainObjectName="LoginLog"   >
     </table>
      
   </context>
