@@ -23,6 +23,8 @@ public interface MbrMapper {
     List<Mbr> selectByExample(MbrExample example);
 
     Mbr selectByPrimaryKey(String mbrId);
+   
+    Mbr selectUser(MbrExample example);
 
     int updateByExampleSelective(@Param("record") Mbr record, @Param("example") MbrExample example);
 

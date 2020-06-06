@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cms.model.Mbr;
 import com.cms.service.MbrService;
-import com.user.model.UserVO;
-import com.user.service.UserService;
 
 @Controller
 @RequestMapping("/user")
@@ -18,17 +17,15 @@ public class UserController {
 	MbrService userService;
 
 	@RequestMapping("/login")
-	public @ResponseBody Object login(@RequestBody UserVO userVO) {
-
-		UserVO user = userService.getUser(userVO);
-		return user;
+	public @ResponseBody Object login(@RequestBody Mbr param) {
+		Mbr mbr = userService.getLogin(param);
+		return mbr;
 	}
 	
 	@RequestMapping("/loginChk")
 	public @ResponseBody Object loginChk() {
-
-		UserVO user = userService.getUser(null);
-		return user;
+		Mbr mbr = userService.getUser(null);
+		return mbr;
 	}
 
 }

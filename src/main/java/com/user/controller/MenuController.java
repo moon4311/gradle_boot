@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.user.model.MenuVO;
-import com.user.service.MenuService;
+import com.cms.model.MenuInfo;
+import com.cms.service.MenuService;
 
 @Controller
 @RequestMapping("/menu")
@@ -21,17 +21,16 @@ public class MenuController {
 	@RequestMapping("")
 //	public @ResponseBody Object getList(@RequestBody MenuVO menuVO) {
 	public @ResponseBody Object getList() {
-		MenuVO menuVO = new MenuVO();
-		List<MenuVO> list = menuService.getMenuList(menuVO);
+		
+		MenuInfo menuVO =new MenuInfo();
+		List<MenuInfo> list = menuService.getMenuList(menuVO);
 		System.err.println(list);
 		return list;
 	}
 	
 	@RequestMapping("/{id}")
-	public @ResponseBody Object getOne(@PathVariable Integer id) {
-		MenuVO vo = new MenuVO();
-		vo.setId(id);
-		vo = menuService.getMenu(vo);
+	public @ResponseBody Object getOne(@PathVariable String id) {
+		MenuInfo vo = menuService.getMenu(id);
 		return vo;
 	}
 

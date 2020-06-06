@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.cms.mapper.MenuInfoMapper;
 import com.cms.model.MenuInfo;
 import com.cms.model.MenuInfoExample;
+import com.cms.model.MenuInfoExample.Criteria;
 
 @Service
 public class MenuService {
@@ -29,9 +30,10 @@ public class MenuService {
 	 * @param menuVO
 	 */
 	public List<MenuInfo> getMenuList(MenuInfo menuInfo) {
-
 		MenuInfoExample example = new MenuInfoExample();
-		
+		Criteria where = example.createCriteria();
+		if(menuInfo!=null) {
+		}
 		
 		return menuInfoMapper.selectByExample(example);
 	}

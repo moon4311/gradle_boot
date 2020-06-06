@@ -25,6 +25,18 @@ public class MbrService {
 		return mbrMapper.selectByPrimaryKey(mbrId);
 	}
 	
+	
+	public Mbr getLogin(Mbr mbr) {
+		
+		MbrExample example = new MbrExample();
+		Criteria where = example.createCriteria();
+		
+		where.andMbrLoginEqualTo(mbr.getMbrLogin());
+		where.andPasswdEqualTo(mbr.getPasswd());
+		
+		return mbrMapper.selectUser(example);
+	}
+	
 	/**
 	 * 사용자 조회
 	 */
