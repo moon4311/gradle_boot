@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.cms.mapper.MenuInfoMapper;
 import com.cms.model.MenuInfo;
 import com.cms.model.MenuInfoExample;
-import com.user.model.MenuVO;
 
 @Service
 public class MenuService {
@@ -42,11 +41,11 @@ public class MenuService {
 	 * insert, update
 	 * @param menuVO
 	 */
-	public boolean upsertMenu(MenuInfo menuInfo) {
-		if(menuInfo.is)
-			return menuInfoMapper.update(menuVO);
+	public int upsertMenu(MenuInfo menuInfo) {
+		if(menuInfo.getMenuId()!=null || menuInfo.getMenuId().equals("") )
+			return menuInfoMapper.insert(menuInfo);
 		else
-			return menuInfoMapper.insert(menuVO);
+			return menuInfoMapper.updateByPrimaryKey(menuInfo);
 	}
 	
 }
