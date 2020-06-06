@@ -57,7 +57,7 @@
     <table 	tableName="TB_CMSIPCONFIGINFO"  	domainObjectName="IpConfigInfo"   >
     	<generatedKey column="MENU_ID" sqlStatement="JDBC" type="pre" />
     </table>
-    <table 	tableName="TB_CMSMBR"  	domainObjectName="MBR"   >
+    <table 	tableName="TB_CMSMBR"  	domainObjectName="Mbr"   >
     	<generatedKey column="MBR_ID" sqlStatement="JDBC" type="pre" />
     </table>
     <table 	tableName="TB_CMSMBRLOG"  	domainObjectName="MbrLog"   >

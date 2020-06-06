@@ -5,14 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cms.mapper.MBRMapper;
 import com.user.mapper.UserMapper;
 import com.user.model.UserVO;
 
 @Service
-public class UserService {
+public class MbrService {
 
 	@Autowired
-	private UserMapper userMapper;
+	private MBRMapper mbrMapper;
 	
 	private UserVO emptyVo = new UserVO();
 	/**

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cms.service.MbrService;
 import com.user.model.UserVO;
 import com.user.service.UserService;
 
@@ -14,7 +15,7 @@ import com.user.service.UserService;
 public class UserController {
 
 	@Autowired
-	UserService userService;
+	MbrService userService;
 
 	@RequestMapping("/login")
 	public @ResponseBody Object login(@RequestBody UserVO userVO) {
