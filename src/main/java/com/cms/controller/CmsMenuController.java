@@ -1,4 +1,4 @@
-package com.user.controller;
+package com.cms.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import com.cms.model.MenuInfo;
 import com.cms.service.MenuService;
 
 @Controller
-@RequestMapping("/menu")
-public class MenuController {
+@RequestMapping("/cms/menu")
+public class CmsMenuController {
 
 	@Autowired
 	MenuService menuService;

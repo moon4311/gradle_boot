@@ -1,4 +1,4 @@
-package com.user.controller;
+package com.cms.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,8 @@ import com.cms.model.Mbr;
 import com.cms.service.MbrService;
 
 @Controller
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/cms/user")
+public class CmsUserController {
 
 	@Autowired
 	MbrService userService;
