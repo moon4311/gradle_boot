@@ -3,11 +3,12 @@
 <ul>
   <li>Vue.js (https://github.com/axios/axios)</li>
   <li>Vue Ui : element(https://element.eleme.io/#/en-US)</li>
+  <li>BootStrap-Vue(https://bootstrap-vue.org/docs)</li>
   <li>HTTP 통신 : axios (https://github.com/axios/axios)</li>
   <li>Build : Gradle 5.6.1 (https://gradle.org/releases/)</li>
   <li>SpringBoot 2.1.7</li>
   <li>mybatis</li>
-  <li>DataBase : mySql</li>
+  <li>DataBase : oracle (ojdbc6)</li>
   <li>Logging : slf4j</li>
 </ul>
 
