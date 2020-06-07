@@ -44,7 +44,7 @@
         <typeAlias alias="Map" type="java.util.Map"/>
         <typeAlias alias="HashMap" type="java.util.HashMap"/>
         
-        <package name="com.user.model"/>
+        <package name="com.cms.model"/>
     </typeAliases>
 
 </configuration>

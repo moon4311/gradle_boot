@@ -29,7 +29,7 @@ public class MenuService {
 	 * 목록 조회
 	 * @param menuVO
 	 */
-	public List<MenuInfo> getMenuList(MenuInfo menuInfo) {
+	public List<MenuInfo> getMenuList(MenuInfo menuInfo) throws Exception{
 		MenuInfoExample example = new MenuInfoExample();
 		Criteria where = example.createCriteria();
 		if(menuInfo!=null) {

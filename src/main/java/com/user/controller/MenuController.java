@@ -20,11 +20,10 @@ public class MenuController {
 
 	@RequestMapping("")
 //	public @ResponseBody Object getList(@RequestBody MenuVO menuVO) {
-	public @ResponseBody Object getList() {
+	public @ResponseBody Object getList() throws Exception{
 		
 		MenuInfo menuVO =new MenuInfo();
 		List<MenuInfo> list = menuService.getMenuList(menuVO);
-		System.err.println(list);
 		return list;
 	}
 	
