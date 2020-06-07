@@ -7,7 +7,7 @@
   <li>Build : Gradle 5.6.1 (https://gradle.org/releases/)</li>
   <li>SpringBoot 2.1.7</li>
   <li>mybatis</li>
-  <li>DataBase : mySql</li>
+  <li>DataBase : oracle (ojdbc6)</li>
   <li>Logging : slf4j</li>
 </ul>
 
